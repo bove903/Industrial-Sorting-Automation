@@ -1,0 +1,15 @@
+# TIA Portal temporary and log files
+Logs/
+Tmp/
+Compile/
+*.log
+*.tmp
+*~
+
+# Backup files created by TIA
+Backup/
+*.bak*
+
+# OS generated files
+.DS_Store
+Thumbs.db
