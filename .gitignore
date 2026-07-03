@@ -6,8 +6,6 @@ Tmp/
 Compile/
 # Cartella fondamentale: contiene i file intermedi di compilazione hardware/software
 # Cambia continuamente e genera falsi conflitti su Git
-**/IM/
-**/System/
 *.log
 *.tmp
 *~
