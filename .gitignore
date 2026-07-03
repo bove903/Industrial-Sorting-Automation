@@ -1,15 +1,43 @@
-# TIA Portal temporary and log files
+# ==========================================
+# TIA Portal (Siemens) - File Temporanei e Log
+# ==========================================
 Logs/
 Tmp/
 Compile/
+# Cartella fondamentale: contiene i file intermedi di compilazione hardware/software
+# Cambia continuamente e genera falsi conflitti su Git
+**/IM/
+**/System/
 *.log
 *.tmp
 *~
 
-# Backup files created by TIA
+# ==========================================
+# TIA Portal - File di Backup e Diagnostica Utente
+# ==========================================
 Backup/
 *.bak*
+# File di diagnostica e log utente specifici della macchina
+*.ap1*_ulog
+*.ap1*_diag
+*.PEData*
 
-# OS generated files
+# ==========================================
+# Factory I/O
+# ==========================================
+# Factory IO salva tutto nel singolo file .factoryio, ma se usi i driver SDK 
+# o generi log di simulazione, questi vanno ignorati
+*.fio_log
+*.fio_bak
+
+# ==========================================
+# File di Sistema e IDE (OS / Windows / Parallels)
+# ==========================================
 .DS_Store
 Thumbs.db
+Desktop.ini
+*.lnk
+
+# Se usate editor esterni come VS Code per documentazione o script
+.vscode/
+*.code-workspace
