@@ -39,3 +39,21 @@ Desktop.ini
 # Se usate editor esterni come VS Code per documentazione o script
 .vscode/
 *.code-workspace
+
+# ==========================================
+# TIA Portal - Protezione File di Sistema e Cache Temporanea
+# ==========================================
+# Escludi SOLO i file di lock temporanei (quelli che iniziano con ~)
+# Questo lascia intatti PEData.plf e PEData.idx per il tuo collega
+**/System/~*
+**/System/PEData/write.lock
+
+# Escludi SOLO i file dell'indice di ricerca interna (SearchIndex)
+# che generano continuamente file .del, .cfs e segmenti temporanei
+**/SearchIndex/*.del
+**/SearchIndex/*.cfs
+**/SearchIndex/segments_*
+**/SearchIndex/write.lock
+
+# Escludi le cartelle di backup automatico locali
+*.backup/
