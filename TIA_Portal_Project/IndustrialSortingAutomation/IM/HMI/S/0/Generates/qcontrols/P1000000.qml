@@ -29,8 +29,8 @@ IGuiPage
 	{
 		id: q671088650
 		objId: 671088650
-		x: 371
-		y: 67
+		x: 307
+		y: 63
 		width: 48
 		height: 48
 		qm_BorderWidth: 1
@@ -49,7 +49,7 @@ IGuiPage
 		width: 224
 		height: 34
 		qm_Transparent : true 
-		qm_TextColor: "#ff31344a"
+		qm_TextColor: "#ff000000"
 		qm_ValueVarTextAlignmentVertical: Text.AlignVCenter
 		qm_Anchors.bottomMargin: 2
 		qm_Anchors.leftMargin: 3
@@ -65,7 +65,7 @@ IGuiPage
 		width: 43
 		height: 27
 		qm_Transparent : true 
-		qm_TextColor: "#ff31344a"
+		qm_TextColor: "#ff313031"
 		qm_ValueVarTextAlignmentVertical: Text.AlignVCenter
 		qm_Anchors.bottomMargin: 2
 		qm_Anchors.leftMargin: 3
@@ -81,7 +81,7 @@ IGuiPage
 		width: 70
 		height: 27
 		qm_Transparent : true 
-		qm_TextColor: "#ff31344a"
+		qm_TextColor: "#ff313031"
 		qm_ValueVarTextAlignmentVertical: Text.AlignVCenter
 		qm_Anchors.bottomMargin: 2
 		qm_Anchors.leftMargin: 3
@@ -97,7 +97,7 @@ IGuiPage
 		width: 226
 		height: 34
 		qm_Transparent : true 
-		qm_TextColor: "#ff31344a"
+		qm_TextColor: "#ff000000"
 		qm_ValueVarTextAlignmentVertical: Text.AlignVCenter
 		qm_Anchors.bottomMargin: 2
 		qm_Anchors.leftMargin: 3
@@ -113,7 +113,7 @@ IGuiPage
 		width: 80
 		height: 27
 		qm_Transparent : true 
-		qm_TextColor: "#ff31344a"
+		qm_TextColor: "#ff313031"
 		qm_ValueVarTextAlignmentVertical: Text.AlignVCenter
 		qm_Anchors.bottomMargin: 2
 		qm_Anchors.leftMargin: 3
@@ -211,7 +211,7 @@ IGuiPage
 		width: 261
 		height: 34
 		qm_Transparent : true 
-		qm_TextColor: "#ff31344a"
+		qm_TextColor: "#ff000000"
 		qm_ValueVarTextAlignmentVertical: Text.AlignVCenter
 		qm_Anchors.bottomMargin: 2
 		qm_Anchors.leftMargin: 3
@@ -227,7 +227,7 @@ IGuiPage
 		width: 80
 		height: 27
 		qm_Transparent : true 
-		qm_TextColor: "#ff31344a"
+		qm_TextColor: "#ff313031"
 		qm_ValueVarTextAlignmentVertical: Text.AlignVCenter
 		qm_Anchors.bottomMargin: 2
 		qm_Anchors.leftMargin: 3
