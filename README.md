@@ -1,5 +1,3 @@
-<div align="center">
-
 # 🏭 Double Sorting System
 
 ### Automated Industrial Sorting Plant — PLC & SCADA
@@ -29,6 +27,7 @@
   - [The Intersection Problem](#the-intersection-problem)
   - [Vision-Based Color Sorting](#vision-based-color-sorting)
 - [🏗️ System Architecture](#️-system-architecture)
+  - [Emergency Stop & Electrical Panel](#emergency-stop--electrical-panel)
 - [🖥️ SCADA & HMI](#️-scada--hmi)
 - [🛠️ Technologies Used](#️-technologies-used)
 - [📂 Repository Structure](#-repository-structure)
@@ -126,6 +125,28 @@ Each Function Block encapsulates an **SFC (Sequential Function Chart)** that was
 2. **Transitions** — Guard conditions for state changes
 3. **State Evolution** — Set/Reset of phase flags
 4. **Actions** — Output assignments tied to active phases
+
+### Emergency Stop & Electrical Panel
+
+The plant features a physical **Emergency Stop mushroom button** on the electrical panel, implementing an industrial-grade safety circuit:
+
+<div align="center">
+
+![Electrical Panel](Media/VistaQuadroElettrico.png)
+
+*The electrical panel featuring digital production displays, emergency stop button, warning light and siren*
+
+</div>
+
+The emergency system follows the **Normally Closed (NC) hardware standard** — the mushroom button continuously sends current (`1`) to the PLC during normal operation. When pressed, it cuts the signal to `0`, triggering an immediate plant-wide shutdown.
+
+Rather than disabling the SFC logic (which would freeze outputs in unpredictable states), the safety layer uses an **asynchronous output mapping** technique:
+- All Function Blocks write to **internal memory flags** (`%M`) instead of physical outputs
+- A dedicated **Safety Network** at the end of OB1 maps each flag to its real hardware output (`%Q`), gating every line through the `Emergency_Stop` contact
+- When the mushroom is pressed: the **warning light starts flashing** and the **siren activates**, while all motors are instantly de-energized
+- When released: the plant **resumes seamlessly** from the exact state it was paused in — no reset required
+
+This design ensures a clean separation between **control logic** (which keeps running) and **power delivery** (which is cut), mirroring real-world safety relay architectures.
 
 ---
 
