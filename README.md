@@ -103,22 +103,22 @@ This ensures proper spacing between pieces and prevents sorting errors.
 The software architecture follows the **IEC 61131-3 structured programming paradigm**, decomposed into **4 independent, reusable Function Blocks (FB)**:
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    OB1 (Main Program)                   │
-│              Orchestrator & Safety Layer                 │
-│                                                         │
-│  ┌──────────┐  ┌──────────┐  ┌───────────┐  ┌────────┐ │
-│  │ FB_Nastro│  │FB_Gestore│  │ FB_Gestore │  │  FB_   │ │
-│  │ Ingresso │  │ Incrocio │  │Smistamento │  │Deviatore│ │
-│  │          │  │          │  │            │  │  (x4)  │ │
-│  │ Conveyor │  │Intersect.│  │  Sorting   │  │Diverter│ │
-│  │ Control  │  │ Arbiter  │  │  Manager   │  │ Driver │ │
-│  └──────────┘  └──────────┘  └────────────┘  └────────┘ │
-│                                                         │
-│  ┌─────────────────────────────────────────────────────┐ │
-│  │        Safety Network — Emergency Stop Layer        │ │
-│  └─────────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────┐
+│                      OB1 (Main Program)                        │
+│                 Orchestrator & Safety Layer                    │
+│                                                                │
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────┐   │
+│  │  FB_Nastro  │ │ FB_Gestore  │ │ FB_Gestore  │ │   FB_   │   │
+│  │  Ingresso   │ │  Incrocio   │ │ Smistamento │ │Deviatore│   │
+│  │             │ │             │ │             │ │  (x4)   │   │
+│  │  Conveyor   │ │ Intersect.  │ │   Sorting   │ │Diverter │   │
+│  │  Control    │ │  Arbiter    │ │   Manager   │ │ Driver  │   │
+│  └─────────────┘ └─────────────┘ └─────────────┘ └─────────┘   │
+│                                                                │
+│  ┌───────────────────────────────────────────────────────────┐ │
+│  │          Safety Network — Emergency Stop Layer            │ │
+│  └───────────────────────────────────────────────────────────┘ │
+└────────────────────────────────────────────────────────────────┘
 ```
 
 Each Function Block encapsulates an **SFC (Sequential Function Chart)** that was designed on paper and then mathematically translated into **Ladder Logic** using the 4-section method:
@@ -165,7 +165,7 @@ The HMI also features an **Analog Alarm** system — threshold-based alerts eval
 
 | Technology | Purpose |
 |:----------:|:--------|
-| <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Siemens-logo.svg/200px-Siemens-logo.svg.png" width="80"> | **TIA Portal V17** — PLC programming (Ladder) & HMI design |
+| ⚙️ | **TIA Portal V17** — PLC programming (Ladder) & HMI design |
 | 🏭 | **Factory IO** — 3D industrial plant simulation |
 | 📐 | **IEC 61131-3 / SFC** — Formal specification & state machine design |
 | 🎨 | **Draw.io** — SFC diagram design & documentation |
@@ -213,37 +213,7 @@ The HMI also features an **Analog Alarm** system — threshold-based alerts eval
 
 ---
 
-## 👥 Team
+# 🐺 Team Members
 
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/YOUR_GITHUB_USERNAME">
-        <img src="https://github.com/YOUR_GITHUB_USERNAME.png" width="120px;" alt="Christian"/><br />
-        <sub><b>Christian [Your Surname]</b></sub>
-      </a><br />
-      <sub>University of Salerno</sub>
-    </td>
-    <td align="center">
-      <a href="https://github.com/COLLEAGUE_GITHUB_USERNAME">
-        <img src="https://github.com/COLLEAGUE_GITHUB_USERNAME.png" width="120px;" alt="Colleague"/><br />
-        <sub><b>[Colleague Name]</b></sub>
-      </a><br />
-      <sub>University of Salerno</sub>
-    </td>
-  </tr>
-</table>
-
-</div>
-
----
-
-<div align="center">
-
-Made with ❤️ at the **University of Salerno**
-
-*TISC — Tecnologie Informatiche dei Sistemi di Controllo — A.Y. 2025/2026*
-
-</div>
+- ◽ [Christian Salvatore Bove](https://github.com/bove903)
+- ◽ [Andrea Botta](https://github.com/AndreaBotta333)
